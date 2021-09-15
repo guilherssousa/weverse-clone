@@ -12,7 +12,6 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="UTF-8"/>
-          {this.props.styleTags}
           
           <link rel="stylesheet" href="/static/global.css" />
 
