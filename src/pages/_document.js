@@ -3,31 +3,26 @@ import Document, {Head, Main, NextScript, Html} from 'next/document';
 import {ServerStyleSheet} from 'styled-components';
 
 export default class MyDocument extends Document {
-  // static async getInitialProps(ctx) {
-  //   const renderPage = ctx.renderPage
-  //   // Step 1: Create an instance of ServerStyleSheet
-  //   const sheet = new ServerStyleSheet();
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
 
-  //   // Step 2: Retrieve styles from components in the page
-  //   const page = renderPage((App) => (props) =>
-  //     sheet.collectStyles(<App {...props} />),
-  //   );
+    const sheet = new ServerStyleSheet();
 
-  //   // Step 3: Extract the styles as <style> tags
-  //   const styleTags = sheet.getStyleElement();
+    const page = ctx.renderPage((App) => (props) =>
+      sheet.collectStyles(<App {...props} />),
+    );
 
-  //   const initialProps = await Document.getInitialProps(ctx)
+    const styleTags = sheet.getStyleElement();
 
-  //   // Step 4: Pass styleTags as a prop
-  //   return {...initialProps, ...page, styleTags};
-  // }
+    return { ...initialProps, page, styleTags };
+  }
 
   render() {
     return (
       <Html>
         <Head>
           <meta charSet="UTF-8"/>
-          {/* {this.props.styleTags} */}
+          {this.props.styleTags}
           
           <link rel="stylesheet" href="/static/global.css" />
 
