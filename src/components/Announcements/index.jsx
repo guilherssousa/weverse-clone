@@ -1,3 +1,5 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import {
     Container, Slider, Announcement,
     AnnouncementDetails, AnnouncementTitle, AnnouncementSubtitle,
@@ -7,21 +9,28 @@ import {
 import announcements from '../../services/api/announcements.json'
 
 const Announcements = () => {
-
-    const announcement = announcements[0]
-
-    console.log(announcement)
-
     return <Container>
-        <Slider>
-            <Unit>
-                <Announcement backgroundImage={announcement.imageUrl} />
-                <AnnouncementDetails>
-                    <AnnouncementTitle color={announcement.titleColor}>{announcement.title}</AnnouncementTitle>
-                    <AnnouncementSubtitle color={announcement.subTitleColor}>{announcement.subTitle}</AnnouncementSubtitle>
-                </AnnouncementDetails>
-            </Unit>
-        </Slider>
+        <Carousel
+            autoPlay
+            infiniteLoop
+            swipeable
+            emulateTouch
+            transitionTime={500}
+            showStatus={false}
+            showIndicators={false}
+            centerMode={false}
+            preventMovementUntilSwipeScrollTolerance
+        >
+            {announcements.map(announcement => (
+                <Unit key={announcement.id}>
+                    <Announcement backgroundImage={announcement.imageUrl} />
+                    <AnnouncementDetails>
+                        <AnnouncementTitle color={announcement.titleColor}>{announcement.title}</AnnouncementTitle>
+                        <AnnouncementSubtitle color={announcement.subTitleColor}>{announcement.subTitle}</AnnouncementSubtitle>
+                    </AnnouncementDetails>
+                </Unit>
+            ))}
+        </Carousel>
     </Container>
 }
 

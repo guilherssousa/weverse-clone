@@ -2,20 +2,26 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   margin: 40px 6px 0 6px;
+  outline: hidden;
+
+  .slider-wrapper {
+    border-radius: 8px;
+  }
 `
 
 export const Slider = styled.div`
-    
+  display: flex;
 `
 
 export const Unit = styled.div`
   position: relative;
   height: 200px;
-  border-radius: 8px;
   overflow: hidden;
   background-color: rgb(245, 247, 250);
   display: flex;
   flex-direction: column;
+
+  min-width: 100%;
 
   &::after {
     position: absolute;
@@ -34,7 +40,6 @@ export const Announcement = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 1040px;
   background-image: url(${props => props.backgroundImage});
 `
 
@@ -64,6 +69,7 @@ export const AnnouncementTitle = styled.h2`
   max-height: 72px;
   color: ${props => props.color};
   font-family: 'Noto Sans KR Bold', sans-serif;
+  text-align: left;
 `
 
 export const AnnouncementSubtitle = styled.div`
@@ -76,5 +82,6 @@ export const AnnouncementSubtitle = styled.div`
   overflow: hidden;
   line-height: 24px;
   max-height: 48px;
+  text-align: left;
   color: ${props => props.color};
 `
