@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
 
     const styleTags = sheet.getStyleElement();
 
-    return { ...initialProps, page, styleTags };
+    return { ...initialProps, styleTags };
   }
 
   render() {
