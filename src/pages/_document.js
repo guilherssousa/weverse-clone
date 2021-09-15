@@ -1,10 +1,11 @@
 import Document, {Head, Main, NextScript, Html} from 'next/document';
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx)
-
-    return { ...initialProps };
+  static getInitialProps({ renderPage }) {
+    const sheet = new ServerStyleSheet();
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
@@ -12,6 +13,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="UTF-8"/>
+          {this.props.styleTags}
           
           <link rel="stylesheet" href="/static/global.css" />
 

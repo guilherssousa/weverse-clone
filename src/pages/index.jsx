@@ -37,7 +37,6 @@ const Home = () => {
           <Label>My Artists</Label>
           {myArtists.length && <Artists artists={myArtists} />}
           <Label>New Artists</Label>
-          <Artists artists={newArtists} />
           <Label>Top Artists</Label>
           <Artists artists={topArtists} />
           <Artists />
