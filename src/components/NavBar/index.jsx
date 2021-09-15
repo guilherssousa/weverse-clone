@@ -1,6 +1,6 @@
 import {
     Header, Container, LeftContainer, RightContainer,
-    HamburguerMenu, Brand
+    HamburguerMenu, Brand, MenuButton
 } from './styled'
 
 
@@ -9,14 +9,14 @@ const NavBar = () => {
         <Container>
         <LeftContainer>
             <HamburguerMenu>
-                <img src={'/static/hamburguer.svg'} />
+                <img alt="Menu" src={'/static/hamburguer.svg'} />
             </HamburguerMenu>
-            <Brand src={'/static/logo.svg'} />
+            <Brand alt="Weverse" src={'/static/logo.svg'} />
         </LeftContainer>
         <RightContainer>
-            <img src={'/static/user.svg'} />
-            <img src={'/static/bell.svg'} />
-            <img src={'/static/menu.svg'} />
+            <MenuButton alt="User" src={'/static/user.svg'} />
+            <MenuButton alt="Notifications" src={'/static/bell.svg'} />
+            <MenuButton alt="Settings" src={'/static/menu.svg'} />
         </RightContainer>
         </Container>
     </Header>

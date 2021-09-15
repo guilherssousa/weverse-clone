@@ -33,7 +33,7 @@ export const ArtistImage = styled.div`
     background-image: url(${props => props.image});
 
     &:hover {
-        transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1);
         transform: scale(1.05);
     }
 `
@@ -47,7 +47,8 @@ export const ArtistDescription = styled.div`
     padding: 0px 18px;
     z-index: 10;
 
-    p {
+    p { 
+        font-family: "Noto Sans KR Bold", sans-serif;
         font-size: 20px;
         font-weight: bold;
         text-align: left;

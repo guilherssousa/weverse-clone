@@ -6,7 +6,7 @@ import artists from '../../services/api/artists.json'
 
 const Artists = () => {
     return <Container>
-        {artists.communities.map((artist, id) => (
+        {artists.communities.sort((a,b) => a.id < b.id).map((artist, id) => (
             <Artist key={id} artist={artist} />
         ))}
     </Container>

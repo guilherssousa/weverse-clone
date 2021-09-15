@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Head from 'next/head'
 
 import Layout from '../components/Layout'
+import Announcements from '../components/Announcements'
 import Artists from '../components/Artists'
 
 const Container = styled.div`
@@ -20,6 +21,7 @@ const Home = () => {
       </Head>
       <Layout>
         <Container>
+          <Announcements />
           <Artists />
         </Container>
       </Layout>

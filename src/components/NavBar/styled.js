@@ -14,6 +14,9 @@ export const Container = styled.div`
     z-index: 1000;
     padding: 0px 32px;
     height: inherit;
+    position: fixed;
+    width: inherit;
+    background-color: #fff;
 `
 
 export const LeftContainer = styled.div`
@@ -40,5 +43,9 @@ export const HamburguerMenu = styled.button`
 export const Brand  = styled.img`
     margin-left: 16px;
     padding: 6px;
+    cursor: pointer;
+`
+
+export const MenuButton  = styled.img`
     cursor: pointer;
 `

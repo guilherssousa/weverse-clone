@@ -26,6 +26,8 @@ export default class MyDocument extends Document {
           <meta charSet="UTF-8"/>
           {this.props.styleTags}
 
+          <link href="/static/global.css" rel="stylesheet"/>
+
           <link
             rel="preload"
             href="/fonts/noto/NotoSansKR-Black.otf"
