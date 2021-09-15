@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import Head from 'next/head'
+import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import Announcements from '../components/Announcements'
@@ -35,10 +35,11 @@ const Home = () => {
         <Container>
           <Announcements />
           <Label>My Artists</Label>
-          {myArtists.length && <Artists artists={myArtists} />}
+          {myArtists.length && <Artists key={'my'} src={myArtists} />}
           <Label>New Artists</Label>
+          <Artists key={'new'} artists={newArtists} />
           <Label>Top Artists</Label>
-          <Artists artists={topArtists} />
+          <Artists key={'top'} artists={topArtists} />
           <Artists />
         </Container>
       </Layout>

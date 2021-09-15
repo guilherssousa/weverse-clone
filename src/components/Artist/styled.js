@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 export const Container = styled.section`
     margin: 0px 6px 16px;
@@ -22,7 +23,7 @@ export const ArtistImageSafeContainer = styled.div`
     overflow: hidden;
 `
 
-export const ArtistImage = styled.div`
+export const ArtistImage = styled(Image)`
     width: 100%;
     height: 186px;
     background-color: rgb(245, 247, 250);
@@ -35,6 +36,13 @@ export const ArtistImage = styled.div`
     &:hover {
         transition: transform .8s cubic-bezier(0.4, 0, 0.2, 1);
         transform: scale(1.05);
+    }
+
+    .image {
+        -webkit-user-drag: none; 
+        -khtml-user-drag: none; 
+        -moz-user-drag: none; 
+        -o-user-drag: none; 
     }
 `
 

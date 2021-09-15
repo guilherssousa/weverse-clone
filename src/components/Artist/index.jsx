@@ -4,7 +4,13 @@ const Artist = ({ artist }) => {
 
     return <Container>
         <ArtistImageSafeContainer>
-            <ArtistImage image={artist.homeBannerImgPath}></ArtistImage>
+            <ArtistImage
+                key={artist.name}
+                src={artist.homeBannerImgPath}
+                width={248}
+                height={186}
+                className="image"
+            />
         </ArtistImageSafeContainer>
         <ArtistDescription>
             <p>{artist.name}</p>

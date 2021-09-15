@@ -5,7 +5,7 @@ import Artist from '../Artist'
 const Artists = ({ artists }) => {
     return artists ? <Container>
         {artists.map((artist, index) => (
-            <Artist key={`${artist.id}-${index}`} artist={artist} />
+            <Artist key={index} artist={artist} />
         ))}
     </Container> : null
 }
