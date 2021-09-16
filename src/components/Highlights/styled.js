@@ -23,6 +23,13 @@ export const Highlight = styled.div`
     padding-bottom: 36px;
     border-bottom: 1px solid rgb(235, 235, 235);
     overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        h1 {
+            text-decoration: underline;
+        }
+    }
 `
 
 export const HighlightImage = styled.div`
@@ -45,7 +52,7 @@ export const HighlightData = styled.div`
     width: 344px;
 `
 
-export const HighlightTitle = styled.div`
+export const HighlightTitle = styled.h1`
     color: rgb(32, 36, 41);
     font-size: 16px;
     font-family: 'Noto Sans KR Medium', sans-serif;

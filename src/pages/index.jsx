@@ -29,9 +29,9 @@ const Label = styled.h2`
 
 const Home = () => {
 
-  const myArtists = artists.communities.filter(artist => artist.joined).slice(0, 4)
-  const newArtists = artists.communities.sort((a,b) => b.id > a.id).slice(0, 4)
-  const topArtists = artists.communities.sort((a,b) => b.memberCount > a.memberCount).slice(0, 4)
+  const myArtists = artists.communities.filter(artist => artist.joined).slice(0, 8)
+  const newArtists = artists.communities.sort((a,b) => b.id > a.id).slice(0, 8)
+  const topArtists = artists.communities.sort((a,b) => b.memberCount > a.memberCount).slice(0, 8)
 
   return (
     <>

@@ -20,6 +20,7 @@ export const Unit = styled.div`
   background-color: rgb(245, 247, 250);
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   min-width: 100%;
 
