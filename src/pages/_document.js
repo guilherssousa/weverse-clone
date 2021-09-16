@@ -41,6 +41,13 @@ export default class MyDocument extends Document {
 
           <link
             rel="preload"
+            href="/fonts/noto/NotoSansKR-Medium.otf"
+            as="font"
+            crossOrigin=""
+          />
+
+          <link
+            rel="preload"
             href="/fonts/noto/NotoSansKR-Regular.otf"
             as="font"
             crossOrigin=""
