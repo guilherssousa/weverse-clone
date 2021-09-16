@@ -6,6 +6,7 @@ import Announcements from '../components/Announcements'
 import Artists from '../components/Artists'
 import Highlights from '../components/Highlights'
 import PostMural from '../components/PostMural'
+import Footer from '../components/Footer'
 
 import artists from '../services/api/artists.json'
 import highlights from '../services/api/highlights.json'
@@ -54,6 +55,7 @@ const Home = () => {
           <Highlights title={"Weverse Magazine"} highlights={magazine} />
           <PostMural posts={fromArtists} />
           <Highlights title={"Weverse Shop"} highlights={shop} />
+          <Footer />
         </Container>
       </Layout>
     </>
