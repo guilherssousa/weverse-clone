@@ -26,5 +26,11 @@ export const Container = styled.div`
 
     .copyright {
         color: rgb(135, 142, 150);
+
+        a { 
+            margin: 0 3px;
+            font-family: 'Noto Sans KR Medium', sans-serif;
+            color: rgb(80, 80, 80);
+        }
     }
 `

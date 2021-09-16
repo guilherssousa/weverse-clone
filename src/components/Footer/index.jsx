@@ -15,7 +15,13 @@ const Footer = () => {
             <span>English</span>
             <span>日本語</span>
         </div>
-        <span className="copyright">Original product: © WEVERSE COMPANY Inc. This is a study only version. Do not rent or sell it. Made by @guilherssousa/@krteazy</span>
+        <span className="copyright">
+            Original product: © WEVERSE COMPANY Inc. This is a study only version.
+            Do not rent or sell it. Made by
+            <a target="_blank" href="https://github.com/guilherssousa/weverse-clone">@guilherssousa</a>
+            /
+            <a target="_blank" href="https://twitter.com/krteazy">@krteazy</a>
+            </span>
     </Container>
   )
 }
