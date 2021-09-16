@@ -45,3 +45,9 @@
     font-weight: 700;
     font-display: swap;
 }
+
+@keyframes sidebarAnimation {
+    100% {
+        transform: translateX(0%);
+    }
+}

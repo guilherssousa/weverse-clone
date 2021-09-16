@@ -38,7 +38,7 @@ const Home = () => {
       <Head>
         <title>Weverse</title>
       </Head>
-      <Layout>
+      <Layout artists={artists}>
         <Container>
           <Announcements />
           {myArtists.length && (<>
