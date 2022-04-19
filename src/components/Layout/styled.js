@@ -1,4 +1,12 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components";
+
+export const Wrapper = styled.div`
+  position: relative;
+  min-height: 100vh;
+
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.textColor};
+`;
 
 export default createGlobalStyle`
     html, body {
@@ -6,12 +14,7 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-
-    .wrapper {
-        position: relative;
-        height: 100%;
-    }
-
+    
     body, h1, h2, h3, h4, h5, h6, p, ol, ul {
         margin: 0;
         padding: 0;
@@ -23,4 +26,4 @@ export default createGlobalStyle`
     :before {
         box-sizing:border-box;
     }
-`
+`;
